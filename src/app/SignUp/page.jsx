@@ -47,8 +47,6 @@ function SignUp() {
   })
 
   const Submit = async () => {
-    console.log("user regi " + input.firstName + input.lastName + input.email + input.password + input.confirmpassword)
-
     let FirstnameTest = NameRegex.test(input.firstName);
     let LastnameTest = NameRegex.test(input.lastName);
     let UserTest = UserNameRegex.test(input.email);
@@ -121,20 +119,19 @@ function SignUp() {
   //for showing password
   const [show, setShow] = React.useState(true)
   const showPassword = () => {
-    console.log(show)
     setShow(!show)
   }
 
   return (
     <>
       <div className="flex h-screen w-screen  items-center justify-center">
-        <div className='flex mt-10 mb-6 items-center justify-center max:sm:w-3/5 border-2 border-slate-400 rounded-lg' >
+        <div className='flex mt-10 mb-6 items-center justify-center max:sm:w-3/5 border-2 border-slate-400 rounded-lg'>
           <div className="sm:w-3/5 m-5 flex flex-col justify-left xs:w-[90%]">
-           <img
+            <img
               className="h-[10vh] w-24"
               src='https://media.wired.co.uk/photos/606da4ae938ecee6e930e9c3/master/w_1600,c_limit/google-logo_2.jpg'
               alt="Google"
-           />
+            />
             {/* <logo1 /> */}
             <h3 className="text-2xl font-bold leading-6 tracking-tight text-slate-900">
               Create Your Google Account
