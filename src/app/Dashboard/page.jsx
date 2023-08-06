@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Header1 from '../Component/Header';
+import MenuBar from '../Component/MenuBar';
 
 function Dashboard() {
     // open side bar
@@ -14,9 +15,11 @@ function Dashboard() {
     setgridFlex(!gridFlex)
   }
 
+
   return (
     <div className='relative'>
       <Header1 handleDrawer={handleDrawer} ChangeFlex={ChangeFlex} />
+      <MenuBar handleDrawer={handleDrawer} open={open} />
     </div>
   )
 }
