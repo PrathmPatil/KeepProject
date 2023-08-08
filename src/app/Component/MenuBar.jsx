@@ -14,9 +14,12 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import { connect } from "react-redux"
 
 
-function MenuBar({ open, handleDrawer, openDisc, setwriteNote }) {
+
+function MenuBar({ open, handleDrawer, openDisc, setwriteNote,dispatch }) {
+    console.log("menu bar"+dispatch)
     const theme = useTheme();
     const [menuData, setmenuData] = React.useState(false);
 
@@ -146,11 +149,11 @@ function MenuBar({ open, handleDrawer, openDisc, setwriteNote }) {
                         >            <DeleteIcon />
 
                         </ListItemIcon>
-                        <ListItemText primary='Delete' sx={{ opacity: open ? 1 : 0, ml: 4, }} />
+                        <ListItemText primary='Trash' sx={{ opacity: open ? 1 : 0, ml: 4, }} />
                     </ListItemButton>
                 </ListItem>
             </List>
         </Box>
     );
 }
-export default MenuBar
+export default connect()(MenuBar)

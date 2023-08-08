@@ -45,7 +45,8 @@ function TakeNoteTwo({ closeDesc }) {
 
     return (
         <>
-            <div className='p-2 mb-8 mb-8 xs:ml-[0vw] xs:w-[100%] max:sm:ml-[0] max:sm:w-[100%] sm:ml-[0vw] sm:w-[90%] md:ml-[2vw] md:w-[70%] lg:ml-[7vw] lg:w-[60%]  xl:w-[54%] xl:ml-[13vw] xl:w-[50vw] 2xl:w-[40vw] rounded-lg border-1 border-slate-400 shadow-md'>
+        <div className='p-2 mb-8 mb-8 xs:ml-[0vw] xs:w-[100%] max:sm:ml-[0] max:sm:w-[100%] sm:ml-[0vw] sm:w-[90%] md:ml-[2vw] md:w-[88%] lg:ml-[7vw] lg:w-[70%]  xl:w-[54%] xl:ml-[13vw] xl 2xl rounded-lg border-1 border-slate-400 shadow-md'>
+            {/* <div className='p-2 mb-8 mb-8 xs:ml-[0vw] xs:w-[100%] max:sm:ml-[0] max:sm:w-[100%] sm:ml-[0vw] sm:w-[90%] md:ml-[2vw] md:w-[70%] lg:ml-[7vw] lg:w-[60%]  xl:w-[54%] xl:ml-[13vw] xl:w-[50vw] 2xl:w-[40vw] rounded-lg border-1 border-slate-400 shadow-md'> */}
                 <div className='w-full'>
                     <div className='h-[13%] sm:h-[20%] w-full flex justify-between items-center'>
                         {/* Title input field */}

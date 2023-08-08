@@ -1,4 +1,4 @@
-"use client"
+
 import React from 'react';
 import RefreshIcon from '@mui/icons-material/Refresh';
 import ViewStreamOutlinedIcon from '@mui/icons-material/ViewStreamOutlined';
@@ -18,7 +18,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MoreIcon from '@mui/icons-material/MoreVert';
-
+import { connect } from 'react-redux';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -61,7 +61,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-function Header1({ handleDrawer, ChangeFlex }) {
+function Header1({title, handleDrawer, ChangeFlex }) {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -171,7 +171,7 @@ function Header1({ handleDrawer, ChangeFlex }) {
                     </IconButton>
                     <div className='flex h-[40px] w-[8vw] flex justify-center items-center'>
                         <img src="keeps.png" alt="" className='h-full w-10'/>
-                        <h1 className="text-3xl font-bold text-slate-600">keep</h1>
+                        <h1 className="text-3xl font-bold text-slate-600">{title}</h1>
                     </div>
                     <Typography variant='h6' noWrap component='div'>
                     </Typography>
@@ -226,5 +226,10 @@ function Header1({ handleDrawer, ChangeFlex }) {
         </Box>
     );
 }
-export default Header1
-
+const mapStateToProps = (state) => {
+    return{
+        title:state.NavReducer.title
+    }
+  }
+  
+  export default connect(mapStateToProps)(Header1)
